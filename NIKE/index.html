@@ -1,0 +1,153 @@
+<html>
+ <title>NIKE</title>
+ 
+<center>
+<h1> INI SEPATUNYA &#128513; </h1>
+</center>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto yang Bisa Diklik</title>
+  <style>
+    /* Gaya untuk gambar kecil */
+    .gambarKlik {
+      width: 200px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    
+    /* Gaya untuk modal (gambar besar) */
+    .modalGambar {
+      display: none; /* Awalnya disembunyikan */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap dengan transparansi */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modalGambar img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .tutupModal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gambar 1 yang dapat diklik -->
+1.  <figure>
+    <img class="gambarKlik" src="NIKE 1.png" alt="Klik untuk lihat gambar besar">
+    <figcaption>NIKE AIR JORDAN ZOOM ZERO GRAVITY BLACK WHITE</figcaption>
+  </figure>
+<br>
+  <!-- Gambar 2 yang dapat diklik -->
+2.  <figure>
+    <img class="gambarKlik" src="NIKE 2.png" alt="Klik untuk lihat gambar besar">
+    <figcaption>NIKE AIR JORDAN ZOOM AIR BLUE WHITE</figcaption>
+  </figure>
+<br>
+3.  <figure>
+    <img class="gambarKlik" src="NIKE 3.png" alt="Klik untuk lihat gambar besar">
+    <figcaption>NIKE AIRMAX</figcaption>
+  </figure>
+
+  <!-- Modal untuk menampilkan gambar besar -->
+  <div class="modalGambar" id="modalGambar1">
+    <span class="tutupModal" id="tutupModal1">&times;</span>
+    <img src="NIKE 1.png" alt="Gambar Besar 1">
+  </div>
+
+  <!-- Modal untuk menampilkan gambar besar kedua -->
+  <div class="modalGambar" id="modalGambar2">
+    <span class="tutupModal" id="tutupModal2">&times;</span>
+    <img src="NIKE 2.png" alt="Gambar Besar 2">
+  </div>
+  
+  <!-- Modal untuk menampilkan gambar besar kedua -->
+  <div class="modalGambar" id="modalGambar3">
+    <span class="tutupModal" id="tutupModal3">&times;</span>
+    <img src="NIKE 3.png" alt="Gambar Besar 3">
+  </div>
+
+  <script>
+    // Mendapatkan elemen gambar kecil dan modal untuk gambar 1
+    var gambarKlik1 = document.querySelectorAll(".gambarKlik")[0];
+    var modalGambar1 = document.getElementById("modalGambar1");
+    var tutupModal1 = document.getElementById("tutupModal1");
+
+    // Ketika gambar pertama diklik, tampilkan modal dengan gambar besar pertama
+    gambarKlik1.onclick = function() {
+      modalGambar1.style.display = "flex"; // Menampilkan modal
+    }
+
+    // Ketika tombol tutup modal pertama diklik, sembunyikan modal
+    tutupModal1.onclick = function() {
+      modalGambar1.style.display = "none"; // Menyembunyikan modal
+    }
+
+
+    // Mendapatkan elemen gambar kecil dan modal untuk gambar 2
+    var gambarKlik2 = document.querySelectorAll(".gambarKlik")[1];
+    var modalGambar2 = document.getElementById("modalGambar2");
+    var tutupModal2 = document.getElementById("tutupModal2");
+
+    // Ketika gambar kedua diklik, tampilkan modal dengan gambar besar kedua
+    gambarKlik2.onclick = function() {
+      modalGambar2.style.display = "flex"; // Menampilkan modal
+    }
+
+    // Ketika tombol tutup modal kedua diklik, sembunyikan modal
+    tutupModal2.onclick = function() {
+      modalGambar2.style.display = "none"; // Menyembunyikan modal
+    }
+
+
+	 // Mendapatkan elemen gambar kecil dan modal untuk gambar 3
+    var gambarKlik3 = document.querySelectorAll(".gambarKlik")[2];
+    var modalGambar3 = document.getElementById("modalGambar3");
+    var tutupModal3 = document.getElementById("tutupModal3");
+
+    // Ketika gambar kedua diklik, tampilkan modal dengan gambar besar ketiga
+    gambarKlik3.onclick = function() {
+      modalGambar3.style.display = "flex"; // Menampilkan modal
+    }
+
+    // Ketika tombol tutup modal ketiga diklik, sembunyikan modal
+    tutupModal3.onclick = function() {
+      modalGambar3.style.display = "none"; // Menyembunyikan modal
+    }
+	
+
+    // Ketika pengguna mengklik di luar gambar modal, sembunyikan modal
+    window.onclick = function(event) {
+      if (event.target === modalGambar1) {
+        modalGambar1.style.display = "none"; // Menyembunyikan modal jika mengklik di luar gambar pertama
+      }
+      if (event.target === modalGambar2) {
+        modalGambar2.style.display = "none"; // Menyembunyikan modal jika mengklik di luar gambar kedua
+      }
+	  if (event.target === modalGambar3) {
+        modalGambar3.style.display = "none"; // Menyembunyikan modal jika mengklik di luar gambar ketiga
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+</html>
